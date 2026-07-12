@@ -29,3 +29,4 @@ server/db/migrations
 *.njsproj
 *.sln
 *.sw?
+.claude/
