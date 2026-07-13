@@ -18,10 +18,10 @@ const badgeVariants = cva(
         // Soft tonal variants — use for status / state indicators (not strong CTAs).
         critical:
           "border-transparent bg-destructive/10 text-destructive dark:bg-destructive/20 dark:text-destructive-foreground",
-        // Attestli palette: gold, used for pending / warning states.
+        // PNGcheckr palette: gold, used for pending / warning states.
         warning:
           "border-transparent bg-[#c9962e]/15 text-[#8a6820] dark:text-[#e8bd6a]",
-        // Attestli palette: teal, used for verified / success states.
+        // PNGcheckr palette: teal, used for verified / success states.
         success:
           "border-transparent bg-[#0e7c7b]/15 text-[#0e7c7b] dark:text-[#4fd1cf]",
         info:

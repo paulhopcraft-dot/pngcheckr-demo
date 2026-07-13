@@ -1,5 +1,5 @@
 /**
- * Seeds the Attestli demo database with 3 fictional candidates and their
+ * Seeds the PNGcheckr demo database with 3 fictional candidates and their
  * fully scripted verification outcomes. Nothing here is computed — every
  * check result, confidence score, and email is fixed data for the demo.
  *
