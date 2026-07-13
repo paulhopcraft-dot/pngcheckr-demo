@@ -56,7 +56,7 @@ export function Landing() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 space-y-20">
       <section className="text-center space-y-6">
-        <h1 className="text-4xl sm:text-5xl font-semibold text-primary tracking-tight">Attestli</h1>
+        <h1 className="text-4xl sm:text-5xl font-semibold text-primary tracking-tight">PNGcheckr</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Employment verification that gives employers the full picture and candidates a badge they can
           actually share — without ever handing over the underlying evidence.

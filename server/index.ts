@@ -151,5 +151,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`[server] Attestli demo API + web listening on port ${PORT}`);
+  console.log(`[server] PNGcheckr demo API + web listening on port ${PORT}`);
 });

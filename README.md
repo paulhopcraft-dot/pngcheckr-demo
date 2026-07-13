@@ -1,6 +1,6 @@
-# Attestli — click-through demo
+# PNGcheckr — click-through demo (formerly Attestli)
 
-A demo web app for **Attestli**, a PNG employment-verification pitch product. Built for a
+A demo web app for **PNGcheckr**, a PNG employment-verification pitch product. Built for a
 boss-meeting walkthrough: every candidate, check result, and email is fictional and fully
 scripted (nothing is computed or randomized), but the stack underneath is real — an Express
 API backed by a real Postgres database via Drizzle ORM, not a static mock file.
@@ -11,7 +11,7 @@ API backed by a real Postgres database via Drizzle ORM, not a static mock file.
 - Backend: Express 5 + Drizzle ORM + `pg` (Postgres driver), served from the same process as
   the built frontend (`server/index.ts` serves `dist/` and the `/api/*` routes)
 - Shared UI primitives (`button`, `card`, `input`, `label`, `badge`) copied from Preventli's
-  shadcn setup and re-themed to Attestli's palette (navy / teal / gold / coral)
+  shadcn setup and re-themed to PNGcheckr's palette (navy / teal / gold / coral)
 
 ## Local setup
 

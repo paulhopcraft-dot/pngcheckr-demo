@@ -1,3 +1,4 @@
+# service names kept as attestli-demo — linked to live Render deploy; rename in Render dashboard separately
 databases:
   - name: attestli-demo-db
     plan: free
