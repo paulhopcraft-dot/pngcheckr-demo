@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Clock, Star } from "lucide-react";
+import { MapPin, Clock, Star, ShieldCheck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { Job } from "@/lib/jobs";
@@ -36,6 +36,12 @@ export function JobCard({ job }: { job: Job }) {
               <Clock className="size-3" />
               {job.postedDaysAgo === 0 ? "Posted today" : `Posted ${job.postedDaysAgo}d ago`}
             </span>
+            {job.verifiedPreferred && (
+              <span className="inline-flex items-center gap-1 text-[#0e7c7b] font-medium">
+                <ShieldCheck className="size-3" />
+                Verified preferred
+              </span>
+            )}
           </div>
 
           <div className="mt-auto flex items-center justify-between pt-2">

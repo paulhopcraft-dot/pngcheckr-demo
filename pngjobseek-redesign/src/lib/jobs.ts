@@ -10,6 +10,7 @@ export type Job = {
   closingDate: string;
   featured?: boolean;
   urgent?: boolean;
+  verifiedPreferred?: boolean;
   description: string;
   requirements: string[];
 };
@@ -50,6 +51,7 @@ export const JOBS: Job[] = [
     postedDaysAgo: 2,
     closingDate: "14 Aug 2026",
     featured: true,
+    verifiedPreferred: true,
     description:
       "Support open-pit survey operations at the Tabubil site — pit mapping, volumetrics, and grade-control survey support for the mine planning team.",
     requirements: [
@@ -70,6 +72,7 @@ export const JOBS: Job[] = [
     postedDaysAgo: 1,
     closingDate: "5 Aug 2026",
     urgent: true,
+    verifiedPreferred: true,
     description:
       "18-month contract overseeing civil works for the Lae port wharf extension. Coordinate subcontractors, manage quality control, and report to the project director.",
     requirements: [
@@ -88,6 +91,7 @@ export const JOBS: Job[] = [
     salary: "K42,000 – K56,000 / yr",
     postedDaysAgo: 4,
     closingDate: "20 Aug 2026",
+    verifiedPreferred: true,
     description:
       "Join the emergency department team providing acute care to patients across the National Capital District. Rotating roster, includes night shifts.",
     requirements: [
@@ -197,6 +201,7 @@ export const JOBS: Job[] = [
     salary: "K48,000 – K62,000 / yr",
     postedDaysAgo: 7,
     closingDate: "22 Aug 2026",
+    verifiedPreferred: true,
     description:
       "Assess commercial loan applications, prepare credit memos, and monitor portfolio risk for the SME lending division.",
     requirements: [

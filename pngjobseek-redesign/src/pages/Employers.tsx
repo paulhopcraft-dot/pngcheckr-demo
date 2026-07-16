@@ -1,6 +1,14 @@
 import { CheckCircle2, Users, Zap, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { VerifiedBadge, type VerificationStatus } from "@/components/VerifiedBadge";
+
+/* Fictional applicants for the screening demo — no real people. */
+const MOCK_APPLICANTS: { name: string; role: string; status: VerificationStatus }[] = [
+  { name: "Maryanne Kaupa", role: "Site Engineer — Port Upgrade", status: "verified" },
+  { name: "Joseph Temu", role: "Site Engineer — Port Upgrade", status: "pending" },
+  { name: "David Arek", role: "Site Engineer — Port Upgrade", status: "unverified" },
+];
 
 const VALUE_PROPS = [
   {
@@ -68,6 +76,51 @@ export function Employers() {
               <p className="text-sm text-muted-foreground">{prop.copy}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-border">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0e7c7b] mb-3">
+              <ShieldCheck className="size-4" />
+              Powered by PNGcheckr
+            </p>
+            <h2 className="font-serif text-2xl font-semibold mb-3">
+              See who's verified before you shortlist
+            </h2>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              Request a verification on any applicant — identity, credentials, and clearances
+              checked by a named reviewer. You see the verdict on your shortlist; the evidence
+              stays private. Applicants who already hold a PNGcheckr badge show it instantly.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Verification from K150 per applicant, billed only on completed checks.
+              Pricing illustrative.
+            </p>
+          </div>
+
+          <Card>
+            <CardContent className="pt-6">
+              <p className="text-sm font-semibold mb-4">
+                Applicants · Site Engineer — Port Upgrade
+              </p>
+              <div className="divide-y divide-border">
+                {MOCK_APPLICANTS.map((applicant) => (
+                  <div
+                    key={applicant.name}
+                    className="py-3 flex items-center justify-between gap-3"
+                  >
+                    <div>
+                      <p className="text-sm font-medium">{applicant.name}</p>
+                      <p className="text-xs text-muted-foreground">{applicant.role}</p>
+                    </div>
+                    <VerifiedBadge status={applicant.status} />
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

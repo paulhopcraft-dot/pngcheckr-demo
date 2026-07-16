@@ -12,6 +12,7 @@ import {
   Landmark,
   Building2,
   Search,
+  ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -117,6 +118,18 @@ export function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-[#0e7c7b]/[.06]">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-x-3 gap-y-1 text-sm text-center">
+          <span className="inline-flex items-center gap-1.5 font-semibold text-[#0e7c7b]">
+            <ShieldCheck className="size-4" />
+            New — verified applicants
+          </span>
+          <span className="text-muted-foreground">
+            Background-checked candidates, powered by our verification partner PNGcheckr.
+          </span>
         </div>
       </section>
 

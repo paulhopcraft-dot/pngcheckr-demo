@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import { MapPin, Clock, CalendarClock, Briefcase, ArrowLeft, Bookmark, Share2 } from "lucide-react";
+import { MapPin, Clock, CalendarClock, Briefcase, ArrowLeft, Bookmark, Share2, ShieldCheck } from "lucide-react";
+import { VerifiedBadge } from "@/components/VerifiedBadge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -59,6 +60,12 @@ export function JobDetail() {
                 <CalendarClock className="size-4" />
                 Closes {job.closingDate}
               </span>
+              {job.verifiedPreferred && (
+                <span className="inline-flex items-center gap-1.5 text-[#0e7c7b] font-medium">
+                  <ShieldCheck className="size-4" />
+                  Prefers verified applicants
+                </span>
+              )}
             </div>
           </div>
 
@@ -104,6 +111,24 @@ export function JobDetail() {
                   Share
                 </Button>
               </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-[#0e7c7b]/30">
+            <CardContent className="pt-6 space-y-3">
+              <VerifiedBadge status="verified" />
+              <p className="text-sm font-semibold">Stand out with verification</p>
+              <p className="text-sm text-muted-foreground">
+                {job.verifiedPreferred
+                  ? "This employer prefers verified applicants. "
+                  : ""}
+                One PNGcheckr check covers your identity, credentials, and clearances —
+                your badge then follows every application you make, without exposing the
+                documents behind it.
+              </p>
+              <Button variant="outline" size="sm" className="w-full text-[#0e7c7b]">
+                Get verified with PNGcheckr
+              </Button>
             </CardContent>
           </Card>
 
